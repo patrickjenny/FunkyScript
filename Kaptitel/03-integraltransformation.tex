@@ -1,4 +1,31 @@
 \section{Integral Transformationen}
     $f \in L^1[-\frac{L}{2}, \frac{L}{2}]$ lässt sich durch
     FR darstellen. Was passiert mit FR, wenn 
-    $L \rightarrow \infty$ ? 
+    $L \rightarrow \infty$ ?
+
+
+    %ToDo
+    \subsection{Testfunktionenräume und Distributionen}
+
+    \begin{Def}
+        V VR über $\mathbb{K}$. Ein Funktional $F$ ist eine Abbildung:
+        $$F: V \rightarrow \mathbb{K}$$
+        $$ \phi \in V \mapsto F(\phi) = \alpha \in \mathbb{K}$$
+
+        Ein lineares Funktional $F$ erfüllt die Linearitätsbedingung
+        $$F(\alpha \phi + \beta \psi) = \alpha F(\phi) + \beta F(\psi) \quad \phi , \psi \in V \quad \alpha, \beta \in \mathbb{K} $$
+
+        Die Menge aller linerarer Funktionale auf $V$
+        $$V^\ast =  \{ F | F:V \rightarrow \mathbb{K} \quad linear \} $$
+
+        bildet selbst bzgl. der "punktweisen" Addition und Multiplikation
+        mit einem Skalar einen VR, den algebraischen Dualraum von $V$.
+        $$(F+G)(\phi) = F(\phi) + G(\phi) \quad \forall \phi \in V $$
+        $$(\alpha F)(\phi) = \alpha (F)(\phi)  \quad \forall \alpha \in \mathbb{K} \quad \forall \phi \in V $$
+    \end{Def}
+
+    \begin{Def}
+        Der Raum der beliebig oft stetig diff-baren (komplex- oder 
+        reellwertigen) Funktionen mit kompakten Trägern ist definiert als
+        $C_0^\infty$
+    \end{Def}

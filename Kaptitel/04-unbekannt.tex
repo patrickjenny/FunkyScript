@@ -1,0 +1,40 @@
+
+
+
+% 07-01-2020
+
+\begin{Bsp}{(Ortsoperator in der Quantenmechanik)\\}
+    $\mathcal{H} = L^2(\mathbb{R})$ und $\hat{Q} = (D,Q)$ definiert durch
+
+    $(Qf)(x) = x f(x)$
+
+    $D(\hat{Q} = C_0^\infty (\mathbb{R})= \{f | f \textrm{ ist } C^\infty$ mit kompaktem Träger\}
+
+    $\hat{Q}$ ist symmetrisch (aber nicht selbstadj.)
+\end{Bsp}
+
+\begin{Bsp}
+    $\mathcal{H} = L^2(\mathbb{R})$ , $\hat{A} = (D,A)$
+
+    $(Af)(x) = x^{-\alpha} f(x) \quad \quad \alpha > 0, \textrm{ fest}$
+
+    $D = \{f \in L^2(\mathbb{R}) | f=0 \textrm{ in Umgebung von } x = 0 \}$
+
+    $\Rightarrow D^\ast = \{g \in L^2(\mathbb{R}) | x^{- \alpha} \cdot g \in L^2(\mathbb{R})\} \supset D$
+
+    und $\hat{A} = (D^\ast, A^\dagger) = (D^\ast, A) \underbrace{\supset}_{Erweiterung} \hat{A} \quad \Rightarrow \hat{A} \textrm{ ist symm.}$ 
+
+    $$\langle g , Af \rangle = \int_{-\infty}^\infty \,dx \, g^\ast(x) (x^{- \alpha} f(x)) = 
+    \int_{-\infty}^\infty \,dx \, (x^{- \alpha} g)^\ast(x) f(x)) = \int_{-\infty}^\infty \,dx (A^\dagger g)(x) f(x)$$
+\end{Bsp}
+
+\begin{Def}
+    Ein linearer Operator $\hat{A} = (D,A)$ in $\mathcal{H}$ heißt
+    \begin{enumerate}[label=(\alph*)]
+        \item abgeschlossen, geschrieben als $\overline{\hat{A}} = \hat{A}$, genau dann, wenn für jede Folge
+                $\{x_n\}_{n \in \mathbb{N}} \subset D$, für die $\lim_{n \rightarrow \infty} {\Vert x_n -x \Vert}_\mathcal{H} = 0$ und $\lim_{n \rightarrow \infty} {\Vert Ax_n -y \Vert}_\mathcal{H} = 0$
+                (mit $x,y \in^{n \rightarrow \infty} \mathcal{H}$) gilt, dass $x \in D$ und $Ax = y$
+        \item abschließbar geanu dann, wenn $\hat{A}$ eine abgeschlossene Erweiterung 
+                $\hat{B} = \overline{\hat{B}} \supset \hat{A}$ besitzt
+    \end{enumerate}
+\end{Def}

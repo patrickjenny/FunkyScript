@@ -38,3 +38,53 @@
                 $\hat{B} = \overline{\hat{B}} \supset \hat{A}$ besitzt
     \end{enumerate}
 \end{Def}
+
+\begin{Bem}
+    Wesentlich (nur bei Abgeschlossenheit gefordert)
+
+    $A( \lim_{n \rightarrow \infty} x_n) = \lim_{n \rightarrow \infty} (A x_n)$
+
+    nur für jene Cauchyfolgen $\{ x_n\}_{n \in \mathbb{N}}$ gilt, für die auch 
+    $\{ A x_n\}_{n \in \mathbb{N}}$ in $\mathcal{H}$ konvergiert.
+\end{Bem}
+
+\begin{Bsp}
+    $L^2[0;1]$
+
+    $\hat{A}_j = (D_j,A) \quad\quad j=1, \,2 \quad\quad (Af)(x) = x^{-\alpha} f(x) \quad \alpha >0 $
+
+    $D_1 = \{ f \in L^2[0;1] \,|\, f = 0 \textrm{ in Umgebung von } x=0 \}$
+    
+    $D_2 = \{ f \in L^2[0;1] \,|\, x^{- \alpha} f \in L^2[0;1] \}$
+
+    $D_1 \subset D_2 \quad \textrm{und} \quad \overline{D_1} = \overline{D_2} = L^2[0;1]$
+
+    \textbf{$\hat{A_1}$ ist nicht abgeschlossen:} $f(x) = x^\alpha \notin D_1$
+    \begin{addmargin}[25pt]{0pt}
+        $f_n(x) = \left\{ \begin{array}{ll}
+            1 & \frac{1}{n} < x \leq 1  \\
+            0 & \, \textrm{sonst} \\
+            \end{array}
+            \right. \quad \in D_1$
+
+        $(Af_n)(x) = \left\{ \begin{array}{ll}
+            1 & \frac{1}{n} < x \leq 1  \\
+            0 & \, \textrm{sonst} \\
+            \end{array}
+            \right. \quad \in L^2[0;1]$         
+            
+        $\lim_{n \rightarrow \infty} f_n = f \quad \in \mathcal{H}$\\
+        $\textrm{  } \hspace{5em} \,\, f \quad \notin D_1 \Rightarrow \hat{A} \textrm{ nicht abgeschlossen}$
+
+        $\lim_{n \rightarrow \infty} Af_n = 1 \quad \in \mathcal{H}$
+    \end{addmargin}
+
+
+    \textbf{$\hat{A_2}$ ist abgeschlossen:}
+    \begin{addmargin}[25pt]{0pt}
+        $\{g_n\}_{n \in \mathbb{N}} \subset D_2$ mit
+        $$ \lim_{n \rightarrow \infty} g_n = g \in L^2[0;1] \quad \textrm{und}$$
+        $$ \lim_{n \rightarrow \infty} Ag_n = G \in L^2[0;1]$$
+        
+    \end{addmargin}
+\end{Bsp}

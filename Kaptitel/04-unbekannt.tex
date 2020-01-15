@@ -86,5 +86,57 @@
         $$ \lim_{n \rightarrow \infty} g_n = g \in L^2[0;1] \quad \textrm{und}$$
         $$ \lim_{n \rightarrow \infty} Ag_n = G \in L^2[0;1]$$
         
+        Z.z.: $g \in D_2$ und $Ag=G$ Es gilt $D_2 = D_1^\ast = D(\hat{A_1}^ \dagger)$
+
+        $\forall h \in D_1: \quad \langle Ah, g \rangle = \langle x^{-\alpha} h, g \rangle =
+        \lim_{n \rightarrow \infty} \langle x^{-\alpha} h, g_n \rangle =
+        \lim_{n \rightarrow \infty} \langle h, x^{-\alpha} g_n \rangle$\\ 
+        $\textrm{ } \qquad \qquad \quad = \lim_{n \rightarrow \infty} \langle h, A g_n \rangle =
+        \langle h , G \rangle$
+
+        $\Rightarrow y \in D_1^\ast = D_2 \quad \textrm{und} \quad G = Ag$
     \end{addmargin}
 \end{Bsp}
+
+\begin{Satz}
+    $\hat{A} = (D,A)$ dicht definiert in $\mathcal{H}$. Dann gilt:
+    \begin{enumerate}[label=(\alph*)]
+        \item $\hat{A} \subseteq \hat{B} \Rightarrow \hat{B}^\dagger \subseteq \hat{A}^\dagger$
+        \item der zu $\hat{A}$ adjuingierte Operator  $\hat{A}^\dagger$ ist abgeschlossen:
+                $\overline{\hat{A}^\dagger} = \hat{A}^\dagger$
+        \item $\hat{A}$ ist genau dann abgeschlossen, wenn $D^\ast = D(\hat{A}^\dagger)$ dicht in
+                $\mathcal{H}$ ist. In diesem Fall ist $\overline{\hat{A}} =
+                \left(\hat{A}^\dagger\right)^\dagger$
+    \end{enumerate}
+\end{Satz}
+
+\begin{Bem}{$\textrm{ }$ \newline} %WA Zeilenumbruch
+    \begin{itemize}
+        \item (b) folgt aus Stetigkeit des Skalarprodukts
+        \item Ein selbstadjungierter Operator ist immer abgeschlossen, da $\hat{A} = \hat{A}^\dagger$ und
+                in (b)  $A^\dagger$ abgeschlossen.
+        \item Ein dichtdefinierter Operator in $\mathcal{H}$ heißt wesentlich selbstadjungiert, wenn 
+                $\hat{A}$ symmetrisch und $\overline{\hat{A}}$ selbstadjungiert.
+    \end{itemize}
+\end{Bem}
+
+\subsubsection{ÜberblicK über Begriffe symmetrisch abgeschlossen und (wesentlich) selbstadjungiert}
+\begin{itemize}
+    \item $\hat{A}$ symm: $\underbrace{\hat{A} \subset \overline{\hat{A}}}_{\hat{A} \textrm{ hat 
+            abgeschl. Erweiterung}} = \left(\hat{A}^\dagger\right)^\dagger \subset \hat{A}^\dagger$
+    \item $\hat{A}$ symm. \& abgeschl.:
+    \item $\hat{A}$ wesentl. selbstadj: 
+    \item $\hat{A}$ selbstadj.: 
+\end{itemize}
+
+Hauptproblem für selbstadjungierten Operator: $D = D(\hat{A}) = D^\ast = D(\hat{A}^\dagger)$
+
+\begin{Satz}
+    Für einen symmetrischen Operar $\hat{A}$ in $\mathcal{H}$ sind folgende Aussagen äquivalent:
+
+    \begin{enumerate}[label=(\alph*)]
+        \item $\hat{A}$ selbstadjungiert: $\hat{A} = \hat{A}^\dagger$
+        
+    \end{enumerate}
+    
+\end{Satz}

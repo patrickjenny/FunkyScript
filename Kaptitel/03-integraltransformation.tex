@@ -6,6 +6,34 @@ $f \in L^1[-\frac{L}{2}, \frac{L}{2}]$ lässt sich durch
 FR darstellen. Was passiert mit FR, wenn 
 $L \rightarrow \infty$ ?
 
+$f(x)$ ; $x \in (-\infty; \infty)$ mit $f(x) \quad \underrightarrow{x \rightarrow \infty} \quad 0$
+... genügend schnell.
+
+Definiere periodische Funktion $f_L(x)$ mit:
+$$f_L(x) = f(x) \quad , \quad -\frac{L}{2} \leq x \leq \frac{L}{2}$$
+
+$FR$ für $f_L$ sollte existieren und soll entsprechend konvergieren
+
+$$f_L(x) = \sum_{k = -\infty}^\infty c_k e^{i\frac{2 \pi}{L}kx} \qquad
+    c_n = \frac{1}{L} \int_{- \frac{L}{2}}^{\frac{L}{2}} f(y) e^{-i\frac{2 \pi}{L}ky} \,dy$$
+
+$$f_L(x) = \frac{1}{2\pi}  \sum_{k = -\infty}^\infty \left[ \frac{2\pi}{L} 
+    \int_{- \frac{L}{2}}^{\frac{L}{2}} f(y) e^{i\frac{2 \pi}{L}k(x-y)} \right] \,dy$$
+
+$$\omega_k = \frac{2 \pi k}{L} \qquad \Delta \omega = \frac{2\pi}{L} \qquad
+    g(\omega, x, L) = \frac{1}{\sqrt{2\pi}} \int_{- \frac{L}{2}}^{\frac{L}{2}} f(y) 
+    e^{i\omega (x-y)}\,dy$$
+
+$$f(x)_L = \frac{1}{\sqrt{2\pi}} \sum_{k = -\infty}^\infty \Delta \omega g(\omega_k, x, L)
+    \qquad \vert x \vert < \frac{L}{2}$$
+
+$\rightarrow$ kann Rieman'sche Summe betrachter werden $\underrightarrow{L \rightarrow \infty}$ 
+Rieman'sches Integral
+
+$$f(x)_L = \frac{1}{\sqrt{2\pi}} \int_{-\infty}^\infty \hat{f}(\omega) e^{i \omega x} \,dw \quad
+    \textrm{mit} \quad
+    \hat{f}(\omega) = \frac{1}{\sqrt{2\pi}} \int_{-\infty}^\infty f(y) e^{-i \omega y} \,dy =
+    \frac{1}{\sqrt{2\pi}} \int_{-\infty}^\infty f(x) e^{-i \omega x} \,dx $$
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % 31-10-2019 (Teil 2) - END
 
@@ -44,7 +72,6 @@ $L \rightarrow \infty$ ?
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \textcolor{red}{EVTL UNVOLLSTÄNDIG}
-
 \subsection{Testfunktionenräume und Distributionen}
 
 \begin{Def}

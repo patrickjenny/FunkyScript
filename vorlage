@@ -1,0 +1,24 @@
+  
+\documentclass{math}
+
+\title{Funktionalanalysys}
+\author{Patrick Jenny}
+\date{\today}
+
+\begin{document}
+	\maketitle
+	
+	\tableofcontents
+	\newpage
+	%%%% Start Your Code Here %%%%%
+
+
+
+
+
+
+	\newpage
+
+	\listoftables
+	\listoffigures
+\end{document}

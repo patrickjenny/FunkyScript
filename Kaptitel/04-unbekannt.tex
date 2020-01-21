@@ -1,8 +1,8 @@
 
 
 
-% 07-01-2020
-
+% 07-01-2020 - BEGIN - Patrick
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{Bsp}{(Ortsoperator in der Quantenmechanik)\\}
     $\mathcal{H} = L^2(\mathbb{R})$ und $\hat{Q} = (D,Q)$ definiert durch
 
@@ -120,7 +120,7 @@
     \end{itemize}
 \end{Bem}
 
-\subsubsection{ÜberblicK über Begriffe symmetrisch abgeschlossen und (wesentlich) selbstadjungiert}
+\subsection{Überblick über Begriffe symmetrisch abgeschlossen und (wesentlich) selbstadjungiert}
 \begin{itemize}
     \item $\hat{A}$ symm: $\underbrace{\hat{A} \subset \overline{\hat{A}}}_{\hat{A} \textrm{ hat 
             abgeschl. Erweiterung}} = \left(\hat{A}^\dagger\right)^\dagger \subset \hat{A}^\dagger$
@@ -144,6 +144,109 @@ Hauptproblem für selbstadjungierten Operator: $D = D(\hat{A}) = D^\ast = D(\hat
     \end{enumerate}
 \end{Satz}
 
-\begin{Bsp}{quantenmechanisches Teilchen in 1 Raumdimension, das im Intervall $[0;1]$ "eingesperrt" ist\\}
+\begin{Bsp}{quantenmechanisches Teilchen in 1 Raumdimension, das im Intervall $[0;1]$ "eingesperrt" ist}
+
+    Impulsoperator:
+    $$\hat{P} = (D,P)$$
+    $$\mathcal{H} = L^2[0;1]$$
+    $D = \{f \in L^2[0,1] \, | \, f \textrm{ absolut stetig und } f' \in L^2[0,1]\}$
+
+    und $(Pf)(x) = i\frac{d}{dx} f(x) \qquad \forall f \in D$
+
+    $D$ ist dicht in $\mathcal{H} \Rightarrow \hat{P}$ ist ein dicht definierter Operator.
+
+    $\forall f,g \in D \textrm{ gilt:} \qquad \langle f,Pg \rangle = \int_0^1 \,dx\, f^\ast(x) i g'(x)
+        = if^\ast(x)g(x) |_0^1 + \int_0^1 \,dx \, (if'(x)^\ast g(x)$
+
+    $\Rightarrow \hat{P} \textrm{ auf } D$ nicht symmetrisch (wegen der Randterme)
+
+    Suche $D' \subset D$, sodass Randterme verschwinden
+
+    $f^\ast(1) \cdot g(1) - f^\ast(0) \cdot g(0) = 0 \quad \forall f,g \in D'$
+
+    $\hat{P}' = (D',P)$ wäre symmetrischer Operator
+
+    Für $f = g \qquad \vert f(1) \vert ^2 = \vert f(0) \vert ^2 \Leftrightarrow f(1) = e^{i \gamma}
+        \textrm{ mit } \gamma \in \mathbb{R}$
+
+    \begin{tabular}{ll}
+       $\rightarrow$ & $f$ an der Stelle $0$ und $f$ an der Stelle $1$ können sich nur ume eine
+                        Phase unterscheiden.
+    \end{tabular}
+    
+    $\hat{P}_\gamma = (D_\gamma , P) \qquad D_\gamma \{f \in D \, | \, f(1) = e^{i \gamma} f(0)\} \qquad                \gamma \in \mathbb{R}$
+
+
+    $\hat{P}_\infty = (D_\infty , P) \quad \textrm{mit} \quad D_\infty \{f \in D \, | \, f(1) = f(0) = 0 \}$
+
+    Es gilt: $D_\infty \subset D \subset D_\infty^\ast \quad \Rightarrow$ symmetrisch, aber nicht   selbstadjungiert
+
+    \textbf{Aber:}
+    \begin{addmargin}[25pt]{0pt}
+        $\hat{P}_\gamma \textrm{ , } \gamma \in \mathbb{R}$ sind selbstadjungierte Operatoren 
+            $\left( \hat{P}_\gamma = \hat{P}_\gamma^\dagger \right)$
+
+        $\Rightarrow \hat{P}_\infty$ besitzt $\infty$ viele selbstadjungierte Erweiterungen.
+
+        $\hat{P}_\gamma = \hat{P}_\gamma^\dagger \supset \hat{P}_\infty \qquad \forall \gamma \in
+            \mathbb{R}$
+
+        Jede selbstadjungierte Erweiterung von $\hat{P}_\infty$ lässt sich in Form von $\hat{P}_\gamma$
+        mit einem bestimmtem $\gamma$ darstellen.
+    \end{addmargin}
 
 \end{Bsp}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 07-01-2020 - END
+
+
+
+% 09-01-2020 - BEGIN - Patrick
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{Bsp}{Impulsoperator in der Quantenmechanik}
+
+    $\mathcal{H} = L^2[0;1]$
+
+    $\hat{P}_\gamma = (D_\gamma , P) \qquad (Pf)(x) = i \frac{d}{dx} f(x)$
+
+    $D_\gamma =  \{ f \in D \, | \, f(1) = e^{i \gamma} f(0) \} \qquad \gamma \in \mathbb{R}$
+
+    $D = \{ f \in L^2[0;1] \, | \, f \textrm{ absolutstetig und } f' \in L^2[0;1] \}$
+
+    $\hat{P}_\gamma \dots \textrm{ s.a Operator}$ \\
+    $\hat{P}_\infty \dots$
+    
+    $\hat{P} \qquad \hat{H} = $ \textcolor{red}{Unvollständig}
+
+    $i \frac{\partial}{\partial t} \Psi (t,x) = H \Psi (t,x) = - \frac{\partial^2}{\partial x^2}
+            \Psi (t,x) + V(x) \Psi (t,x)$
+
+    \hspace{25px}
+        	 ist Multiplikationsoperator
+\end{Bsp}
+
+
+
+\subsection{Beschränkte und kompakte Operatoren}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 09-01-2020 - END
+
+
+
+
+% 14-01-2020 - BEGIN
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 14-01-2020 - END
+
+
+
+% 16-01-2020 - BEGIN
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 16-01-2020 - END

@@ -28,6 +28,8 @@
 % \si[hoptionsi]{huniti}
 % \SI[hoptionsi]{hnumberi}[hpre-uniti]{huniti}
 
+\usepackage{color}
+
 \renewcaptionname{ngerman}{\figurename}{Abb.}
 \renewcaptionname{ngerman}{\tablename}{Tab.}
 

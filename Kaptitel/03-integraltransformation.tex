@@ -1,46 +1,134 @@
 \section{Integral Transformationen}
-    $f \in L^1[-\frac{L}{2}, \frac{L}{2}]$ lässt sich durch
-    FR darstellen. Was passiert mit FR, wenn 
-    $L \rightarrow \infty$ ?
+
+% 31-10-2019 (Teil 2) - BEGIN 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+$f \in L^1[-\frac{L}{2}, \frac{L}{2}]$ lässt sich durch
+FR darstellen. Was passiert mit FR, wenn 
+$L \rightarrow \infty$ ?
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 31-10-2019 (Teil 2) - END
+
+% 05-11-2019 - BEGIN 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-    %ToDo
-    \subsection{Testfunktionenräume und Distributionen}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 05-11-2019 - END
 
-    \begin{Def}
-        V VR über $\mathbb{K}$. Ein Funktional $F$ ist eine Abbildung:
-        $$F: V \rightarrow \mathbb{K}$$
-        $$ \phi \in V \mapsto F(\phi) = \alpha \in \mathbb{K}$$
 
-        Ein lineares Funktional $F$ erfüllt die Linearitätsbedingung
-        $$F(\alpha \phi + \beta \psi) = \alpha F(\phi) + \beta F(\psi) \quad \phi , \psi \in V \quad \alpha, \beta \in \mathbb{K} $$
+% 07-11-2019 - BEGIN 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-        Die Menge aller linerarer Funktionale auf $V$
-        $$V^\ast =  \{ F | F:V \rightarrow \mathbb{K} \quad linear \} $$
 
-        bildet selbst bzgl. der "punktweisen" Addition und Multiplikation
-        mit einem Skalar einen VR, den algebraischen Dualraum von $V$.
-        $$(F+G)(\phi) = F(\phi) + G(\phi) \quad \forall \phi \in V $$
-        $$(\alpha F)(\phi) = \alpha (F)(\phi)  \quad \forall \alpha \in \mathbb{K} \quad \forall \phi \in V $$
-    \end{Def}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 07-11-2019 - END
 
-    \begin{Def}
-        Der Raum der beliebig oft stetig diff-baren (komplex- oder 
-        reellwertigen) Funktionen mit kompakten Trägern ist definiert als
-        $$C_0^\infty (\mathbb{R}^n)  := \{ f:\mathbb{R}^n \rightarrow \mathbb{C}(\mathbb{R}) | f \in C^\infty(\mathbb{R}^n) \textrm{ und } f(\vec{x})=0 \textrm{ für } \vec{x} \in \mathbb{R}^n \setminus  \Omega \textrm{ mit } \Omega \textrm{ kompakt} \}$$
-        $$( \Omega \subset \mathbb{R}^n \textrm{ kompakt } \Rightarrow \Omega \textrm{ abgeschlossen und beschränkt} )$$
 
-        Bsp: $\phi = \left\{ \begin{array}{ll}
-            e^{\frac{1}{x^2-1}} & |x| < 1 \\
-            0 & \, |x| \geq 1 \\
-            \end{array}
-            \right. \quad \in C_0^{\infty} $
-    \end{Def}
+% 12-11-2019 - BEGIN 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-    \begin{Def}{Konvergenz in $C_0^{\infty}(\mathbb{R}^n)$ \\}
-        Eine Funktionenfolge $(f_k)_{k \in \mathbb{N}} \subset C_0^{\infty}(\mathbb{R}^n)$ konvergiert gegen
-        $f \in C_0^{\infty}(\mathbb{R}^n)$
-        $$\Leftrightarrow \lim_{k\rightarrow \infty} \Vert D^\alpha f_k - D^\alpha f \Vert _{\Omega , \infty} = 0 \quad \forall 
-        \alpha \in \mathbb{N}^n \quad \forall \Omega \in \mathbb{R}^n \textrm{ kompakt} $$
-        $$ \rightarrow \max_{\vec{x} \in \Omega} \vert D^\alpha f_k - D^\alpha f \vert$$
-    \end{Def}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 12-11-2019 - END
+
+
+% 14-11-2019 - BEGIN 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 14-11-2019 - END
+
+% 19-11-2019 - BEGIN 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\textcolor{red}{EVTL UNVOLLSTÄNDIG}
+
+\subsection{Testfunktionenräume und Distributionen}
+
+\begin{Def}
+    V VR über $\mathbb{K}$. Ein Funktional $F$ ist eine Abbildung:
+    $$F: V \rightarrow \mathbb{K}$$
+    $$ \phi \in V \mapsto F(\phi) = \alpha \in \mathbb{K}$$
+
+    Ein lineares Funktional $F$ erfüllt die Linearitätsbedingung
+    $$F(\alpha \phi + \beta \psi) = \alpha F(\phi) + \beta F(\psi) \quad \phi , \psi \in V \quad \alpha, \beta \in \mathbb{K} $$
+
+    Die Menge aller linerarer Funktionale auf $V$
+    $$V^\ast =  \{ F | F:V \rightarrow \mathbb{K} \quad linear \} $$
+
+    bildet selbst bzgl. der "punktweisen" Addition und Multiplikation
+    mit einem Skalar einen VR, den algebraischen Dualraum von $V$.
+    $$(F+G)(\phi) = F(\phi) + G(\phi) \quad \forall \phi \in V $$
+    $$(\alpha F)(\phi) = \alpha (F)(\phi)  \quad \forall \alpha \in \mathbb{K} \quad \forall \phi \in V $$
+\end{Def}
+
+\begin{Def}
+    Der Raum der beliebig oft stetig diff-baren (komplex- oder 
+    reellwertigen) Funktionen mit kompakten Trägern ist definiert als
+    $$C_0^\infty (\mathbb{R}^n)  := \{ f:\mathbb{R}^n \rightarrow \mathbb{C}(\mathbb{R}) | f \in C^\infty(\mathbb{R}^n) \textrm{ und } f(\vec{x})=0 \textrm{ für } \vec{x} \in \mathbb{R}^n \setminus  \Omega \textrm{ mit } \Omega \textrm{ kompakt} \}$$
+    $$( \Omega \subset \mathbb{R}^n \textrm{ kompakt } \Rightarrow \Omega \textrm{ abgeschlossen und beschränkt} )$$
+
+    Bsp: $\phi = \left\{ \begin{array}{ll}
+        e^{\frac{1}{x^2-1}} & |x| < 1 \\
+        0 & \, |x| \geq 1 \\
+        \end{array}
+        \right. \quad \in C_0^{\infty} $
+\end{Def}
+
+\begin{Def}{Konvergenz in $C_0^{\infty}(\mathbb{R}^n)$ \\}
+    Eine Funktionenfolge $(f_k)_{k \in \mathbb{N}} \subset C_0^{\infty}(\mathbb{R}^n)$ konvergiert gegen
+    $f \in C_0^{\infty}(\mathbb{R}^n)$
+    $$\Leftrightarrow \lim_{k\rightarrow \infty} \Vert D^\alpha f_k - D^\alpha f \Vert _{\Omega , \infty} = 0 \quad \forall 
+    \alpha \in \mathbb{N}^n \quad \forall \Omega \in \mathbb{R}^n \textrm{ kompakt} $$
+    $$ \rightarrow \max_{\vec{x} \in \Omega} \vert D^\alpha f_k(\vec{x}) - D^\alpha f(\vec{x}) \vert$$
+\end{Def}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 19-11-2019 - END
+
+
+
+% 21-11-2019 - BEGIN 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 21-11-2019 - END
+
+
+
+% 26-11-2019 - BEGIN 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 26-11-2019 - END
+
+
+
+% 28-11-2019 - BEGIN 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 28-11-2019 - END
+
+
+
+% 03-12-2019 - BEGIN 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 03-12-2019 - END
+
+
+
+% 05-12-2019 - BEGIN 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 05-12-2019 - END

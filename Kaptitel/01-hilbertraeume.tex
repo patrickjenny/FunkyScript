@@ -1,81 +1,122 @@
 \section{Hilberträume}
-    \begin{Def}
-		Ein metrischer Raum besteht aus eine Menge $X$ und einer Abb. $d: X,X\rightarrow \mathbb{R}$
-		die jedem geordneten Paar von Elementen aus $X$ eine reele Zahl Zuordnet.
 
-		Diese Abb soll ($\forall x,y,z \in X$) folgende Eigenschaften bessitzen:
+% 03-10-2019 - BEGIN
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{Def}
+	Ein metrischer Raum besteht aus eine Menge $X$ und einer Abb. $d: X,X\rightarrow \mathbb{R}$
+	die jedem geordneten Paar von Elementen aus $X$ eine reele Zahl Zuordnet.
 
-		\begin{itemize}
-			\item $d(x,y) \geq 0$ (Nichtnegativität)
-			\item $d(x,y) = 0 \Leftrightarrow x = y$ (Eindeutigkeit)
-			\item $d(x,y) = d(y,x)$ (Symetrie)
-			\item $d(x,y) + d(y,z) \geq d(x,z)$ (Dreiecksungleichung)
-		\end{itemize}
-	\end{Def}
-	
-	\begin{Def}
-		Ein normierter Raum ist ein Vektorraum $V$ über den Köprer $\mathbb{C} (\mathbb{R})$
-		auf dem eine Abb. $\Vert\cdot\Vert: V \rightarrow \mathbb{R}$ erklärt ist, die jedem
-		Element $x \in V$ eine reele Zahl $\Vert x \Vert$ zuordnet und folgende Eigenschaften
-		besitzt
-		\begin{itemize}
-			\item $\Vert x \Vert \geq 0$ (Nichtnegativität)
-			\item $\Vert x \Vert = 0 \Leftrightarrow x = 0$ (Eindeutigkeit)
-			\item $\Vert \alpha \cdot x \Vert = \vert \alpha \vert \cdot \Vert x \Vert$ (Skalierung)
-			\item $\Vert x + y\Vert \leq \Vert x \Vert + \Vert y \Vert$ (Dreiecksungleichung)
-		\end{itemize}
-	\end{Def}
+	Diese Abb soll ($\forall x,y,z \in X$) folgende Eigenschaften bessitzen:
 
-	\begin{Bem}
-		Jeder normierte Raum ist ein metrischer Raum mit Metrik $d(x,y) = \Vert x-y \Vert$
-		durch die Norm induzierte Metrik. 
-	\end{Bem}
-
-	\begin{Def}
-		Ein normierter Raum, in dem jede Cauchy-Folge konvergiert (bzgl. Metrik $d(x,y) = \Vert x-y \Vert$)
-		ist ein vollständig normierter Raum bzw. Banachraum.
-	\end{Def}
-
-	% \begin{Bsp}
-	% 	\begin{itemize}
-	% 		\item $\mathbb{R}^n: \Vert \vec x \Vert = \sqrt{\sum_{i=1}^n x_i^2}$
-	% 		\item $\mathbb{C}^n: \Vert \vec z \Vert = \sqrt{\sum_{i=1}^n z_i^2}$
-	% 		\item Hilbert'scher Folgenraum $\ell^2$
-	% 	\end{itemize}
-	% \end{Bsp}
-
-	\textbf{Beispiele}
 	\begin{itemize}
-		\item $\mathbb{R}^n: \Vert \vec x \Vert = \sqrt{\sum_{i=1}^n x_i^2}$
-		\item $\mathbb{C}^n: \Vert \vec z \Vert = \sqrt{\sum_{i=1}^n z_i^2}$
-		\item Hilbert'scher Folgenraum $\ell^2$
+		\item $d(x,y) \geq 0$ (Nichtnegativität)
+		\item $d(x,y) = 0 \Leftrightarrow x = y$ (Eindeutigkeit)
+		\item $d(x,y) = d(y,x)$ (Symetrie)
+		\item $d(x,y) + d(y,z) \geq d(x,z)$ (Dreiecksungleichung)
 	\end{itemize}
+\end{Def}
 
-	\begin{Def}
-		Sei $V$ ein Vektorraum über $\mathbb{C} (\mathbb{R})$.
-		Ein Skalarprodukt auf $V$ ist eine Abb. die jedem geordneten Paar von
-		Elementen aus $V$ eindeutig ein, mit $\langle x,y\rangle$ bezeichnetes Element aus
-		$\mathbb{C} (\mathbb{R})$ zuordnet und folgende Eigenschaften erfüllt.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 03-10-2019 - END
 
-		$\langle\cdot,\cdot \rangle: V\cdot V \rightarrow \mathbb{C}$ 
-		
-		$\forall x,y,z \in V \quad \forall \lambda \in \mathbb{C} (\mathbb{R})$
+% 08-10-2019 - BEGIN
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{Def}
+	Ein normierter Raum ist ein Vektorraum $V$ über den Köprer $\mathbb{C} (\mathbb{R})$
+	auf dem eine Abb. $\Vert\cdot\Vert: V \rightarrow \mathbb{R}$ erklärt ist, die jedem
+	Element $x \in V$ eine reele Zahl $\Vert x \Vert$ zuordnet und folgende Eigenschaften
+	besitzt
+	\begin{itemize}
+		\item $\Vert x \Vert \geq 0$ (Nichtnegativität)
+		\item $\Vert x \Vert = 0 \Leftrightarrow x = 0$ (Eindeutigkeit)
+		\item $\Vert \alpha \cdot x \Vert = \vert \alpha \vert \cdot \Vert x \Vert$ (Skalierung)
+		\item $\Vert x + y\Vert \leq \Vert x \Vert + \Vert y \Vert$ (Dreiecksungleichung)
+	\end{itemize}
+\end{Def}
 
-		\begin{itemize}
-			\item $\langle x,y\rangle = \langle y,x\rangle^\ast$
-			\item $\langle x,\lambda y\rangle = \lambda \langle x,y\rangle$
-			\item $\langle x,y+z\rangle = \langle x,y\rangle + \langle x,z\rangle$
-			\item $\langle x,x\rangle \geq$ für $ x \in \mathbb{R}$
-			\item $\langle x,x\rangle = 0 \Leftrightarrow x=0$
-		\end{itemize}
-	\end{Def}
+\begin{Bem}
+	Jeder normierte Raum ist ein metrischer Raum mit Metrik $d(x,y) = \Vert x-y \Vert$
+	durch die Norm induzierte Metrik. 
+\end{Bem}
 
-	\begin{Bem}
-		Skalarprodukt ist 'positiv hermitische Form'
-		\begin{itemize}
-			\item $\langle \lambda x,y\rangle = \langle y,\lambda x\rangle^\ast = \lambda^\ast \langle y, x\rangle^\ast=
-					\lambda^\ast \langle x,y\rangle$
-			\item $\langle x+y,z\rangle = \langle z,x+y\rangle^\ast + \langle x,z\rangle$
-		\end{itemize}
-	\end{Bem}
+\begin{Def}
+	Ein normierter Raum, in dem jede Cauchy-Folge konvergiert (bzgl. Metrik $d(x,y) = \Vert x-y \Vert$)
+	ist ein vollständig normierter Raum bzw. Banachraum.
+\end{Def}
 
+% \begin{Bsp}
+% 	\begin{itemize}
+% 		\item $\mathbb{R}^n: \Vert \vec x \Vert = \sqrt{\sum_{i=1}^n x_i^2}$
+% 		\item $\mathbb{C}^n: \Vert \vec z \Vert = \sqrt{\sum_{i=1}^n z_i^2}$
+% 		\item Hilbert'scher Folgenraum $\ell^2$
+% 	\end{itemize}
+% \end{Bsp}
+
+\textbf{Beispiele}
+\begin{itemize}
+	\item $\mathbb{R}^n: \Vert \vec x \Vert = \sqrt{\sum_{i=1}^n x_i^2}$
+	\item $\mathbb{C}^n: \Vert \vec z \Vert = \sqrt{\sum_{i=1}^n z_i^2}$
+	\item Hilbert'scher Folgenraum $\ell^2$
+\end{itemize}
+
+\begin{Def}
+	Sei $V$ ein Vektorraum über $\mathbb{C} (\mathbb{R})$.
+	Ein Skalarprodukt auf $V$ ist eine Abb. die jedem geordneten Paar von
+	Elementen aus $V$ eindeutig ein, mit $\langle x,y\rangle$ bezeichnetes Element aus
+	$\mathbb{C} (\mathbb{R})$ zuordnet und folgende Eigenschaften erfüllt.
+
+	$\langle\cdot,\cdot \rangle: V\cdot V \rightarrow \mathbb{C}$ 
+	
+	$\forall x,y,z \in V \quad \forall \lambda \in \mathbb{C} (\mathbb{R})$
+
+	\begin{itemize}
+		\item $\langle x,y\rangle = \langle y,x\rangle^\ast$
+		\item $\langle x,\lambda y\rangle = \lambda \langle x,y\rangle$
+		\item $\langle x,y+z\rangle = \langle x,y\rangle + \langle x,z\rangle$
+		\item $\langle x,x\rangle \geq$ für $ x \in \mathbb{R}$
+		\item $\langle x,x\rangle = 0 \Leftrightarrow x=0$
+	\end{itemize}
+\end{Def}
+
+\begin{Bem}
+	Skalarprodukt ist 'positiv hermitische Form'
+	\begin{itemize}
+		\item $\langle \lambda x,y\rangle = \langle y,\lambda x\rangle^\ast = \lambda^\ast \langle y, x\rangle^\ast=
+				\lambda^\ast \langle x,y\rangle$
+		\item $\langle x+y,z\rangle = \langle z,x+y\rangle^\ast + \langle x,z\rangle$
+	\end{itemize}
+\end{Bem}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 08-10-2019 - END
+
+
+% 10-10-2019 - BEGIN
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 10-10-2019 - END
+
+
+% 15-10-2019 - BEGIN
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 15-10-2019 - END
+
+
+% 17-10-2019 - BEGIN
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 17-10-2019 - END
+
+
+% 22-10-2019 (Teil 1) - BEGIN 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 22-10-2019 - END

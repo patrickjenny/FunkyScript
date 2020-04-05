@@ -121,13 +121,62 @@ muss beachtet werden.
 	\end{figure}
 
 	$$a_{n \geq 0} = \frac{1}{\pi} \int_{-\pi}^{\pi} \,dx x \cos(nx) = 0$$
-	%TODO
+	
+	$$
+	b_{n > 0} = \frac{1}{\pi} \int_{-\pi}^{\pi} \,dx x \sin(nx)
+		= \left. - \frac{x}{n \pi} \cos(nx) \right\vert_{-\pi}^\pi
+			+ \int_{-\pi}^{\pi} \,dx \cos(nx)
+		= - \frac{2 \pi}{n \pi} \cos(n\pi)
+		= \frac{2}{n} = (-1)^{n-1}
+	$$
+
+	$$FR(f)(x) = 2 \sum_{n=1}^\infty \frac{1}{n} (-1)^{n+1} \sin(nx)$$
+	$$\rightarrow FR \textrm{ konvergiert in } L^2\textrm{-Norm gegen } f$$
+
+	Ableitung der Fourierreihe:
+	$$\frac{d}{dx} FR(f)(x) = 2 \sum_{n=1}^\infty (-1)^{n+1} \cos(nx) \quad \rightarrow
+	\textrm{ divergente Reihe \textbf{!}}$$
+\end{Bsp}
+
+\begin{Bsp}{$f(x)=\frac{x}{b} \qquad x \in (0,b) \textrm{ mit Periode } b$}
+	
+	\begin{tabular}{ll}
+		Kennen:	& $FR(g)(y)$ für $g(y)=y \qquad y \in (- \pi , \pi)$ \\
+				& $FR(g)(y) = 2 \sum_{n=1}^\infty \frac{(-1)^{n+1}}{n} \sin(y)$
+	\end{tabular}
+
+	$y = \frac{2 \pi}{b} x - \pi$
+
+	$$
+	\left.
+	\begin{array}{l}
+		f(0) = 0 \quad g(y(0)) = g(-\pi) = -\pi \\
+		f(b) = 1 \quad g(y(b)) = g(\pi) = \pi \\
+	\end{array}
+	\right\}
+	\Rightarrow g = 2\pi f - \pi \quad \Rightarrow \quad f = \frac{1}{2\pi}g + 
+	\frac{1}{2}
+	$$
+
+	$$
+	FR(f)(x) = \frac{1}{2} + \frac{1}{2\pi} FR(g)(y(x))
+		= \frac{1}{2} + \frac{1}{2\pi} 2 \sum_{n=1}^\infty \frac{(-1)^{n+1}}{n}
+			\sin\left( n \left( \frac{2\pi}{b}x-\pi \right) \right)
+		= \frac{1}{2} - \frac{1}{\pi} \sum_{n=1}^\infty \frac{1}{n}
+			\sin \left( \frac{2\pi}{b} n x \right)
+	$$
+
 \end{Bsp}
 
 \begin{Satz}
 	Ist eine periodische Funktion $f$, die auf dem Periodizitätsintervall
-	$[-\frac{L}{2}, \frac{L}{2}]$ stückweise stetig diff-bar
-	%TODO
+	$[-\frac{L}{2}, \frac{L}{2}]$ stückweise stetig diff-bar ($f$ ist auf
+	$(-\frac{L}{2}, \frac{L}{2})$ diff-bar und $f'$ ist auf $(-\frac{L}{2}, \frac{L}{2})$
+	stückweise stetig), auf ganz ganz $\mathbb{R}$ stetig ist, so gilt im
+	Differenzierbarkeitsbereich von f
+
+	$$FR(f')(x) = \underbrace{\frac{d}{dx}FR(f)(x)}_{termweise \quad Ableitung}$$
+
 \end{Satz}
 
 \begin{Bem}
@@ -140,8 +189,21 @@ muss beachtet werden.
 	$f(x)$ stückweise diff-bare Funktion auf $[-\frac{L}{2}, \frac{L}{2}]$ mit
 	Fourierreihe $FR(f)(x)$, wobei $a_0 = 0$ und Stammfunktion $F(x)$.
 	Dann gilt:
-	$$FR(f)(x) = \int \,dx FR(f)(x)$$
+	$$FR(f)(x) = \underbrace{\int \,dx FR(f)(x)}_{termweise \quad Integration} $$
 \end{Satz}
+
+\subsubsection{Konvergenz von Fourierreihen}
+\textbf{Konvergenz im Mittel (Konvergenz in $L^2$-Norm)}
+$$\lim_{N \rightarrow \infty} \Vert FR_N(f)-f \Vert_2 = 0$$
+
+\textbf{Punktweise Konvergenz}
+$$\lim_{N \rightarrow \infty} \vert FR_N(f)(x)-f(x) \vert = 0$$
+
+\textbf{Gleichmäßige Konvergenz}
+$$\lim_{N \rightarrow \infty} \Vert FR_N(f)-f \Vert_\infty = \lim_{N \rightarrow \infty} 
+\max_{x \in [-\frac{L}{2} , \frac{L}{2}]} \vert FR_N(f)(x)-f(x) \vert = 0$$
+
+mit $FR_N(f)(x) = \frac{1}{2} a_0 + \sum_{n=1}^N(a_n \cos(x) + b_n \sin(x)$
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % 24-10-2019 - END
